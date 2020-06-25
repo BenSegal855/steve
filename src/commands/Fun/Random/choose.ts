@@ -15,8 +15,9 @@ export default class extends SteveCommand {
 		});
 	}
 
-	public async run(msg: KlasaMessage, choices: string[]): Promise<Message> {
-		return msg.channel.send(`${this.client.user.username} chooses... ${choices[Math.floor(Math.random() * choices.length)]}!`);
+	public async run(msg: KlasaMessage): Promise<Message> {
+		const replys = ["I have no opinions","Just do whatever","Im Stove, I don't make decisions","Are you asking me?"]
+		return msg.channel.send(`${this.client.user.username} says... ${replys[Math.floor(Math.random() * replys.length)]}!`);
 	}
 
 }

@@ -2,7 +2,7 @@ import { SteveCommand } from '@lib/structures/commands/SteveCommand';
 import { CommandStore, KlasaMessage } from 'klasa';
 import { Message } from 'discord.js';
 import { oneLine } from 'common-tags';
-
+const delay = require('delay');
 const DICE_REGEX = /(?<count>\d{1,2})?d(?<sides>\d{1,4})(?<explode>!)?(?<keep>kl?(?<keepCount>\d{1,2}))?/;
 
 type KeepType = 'highest' | 'lowest' | false;
@@ -64,6 +64,7 @@ export default class extends SteveCommand {
 	}
 
 	public async run(msg: KlasaMessage, specs: RollSpec[]): Promise<Message> {
+		await delay(60000);
 		const results: DiceResult[] = [];
 
 		for (const spec of specs) {
@@ -92,10 +93,10 @@ export default class extends SteveCommand {
 		if (results.length === 1) {
 			const result = results[0];
 			const emoji = getEmoji(result.spec);
-			const message = `${emoji} You rolled: \`${result.rolls.join(', ')}\` ${emoji}`;
+			const message = `${msg.author}, You rolled: \`${result.rolls.join(', ')}\` ${emoji}`;
 			return msg.channel.send(message);
 		} else {
-			let message = 'You rolled:';
+			let message = `${msg.author}, You rolled:`;
 			for (const result of results) {
 				const emoji = getEmoji(result.spec);
 				message += `\n${emoji} ${result.spec.input}: \`${result.rolls.join(', ')}\``;
