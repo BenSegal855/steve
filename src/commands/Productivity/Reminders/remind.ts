@@ -27,7 +27,7 @@ export default class extends SteveCommand {
 
 		await this.client.schedule.createReminderTask(msg.author.id, reminder, duration, msg.channel instanceof TextChannel && reminderChannel ? reminderChannel : msg.channel.id);
 
-		return msg.channel.send(`${msg.author}, I'll remind you about that in ${friendlyDuration(duration)}.`);
+		return msg.channel.send(`${msg.author}, I'll remind you about that in around ${friendlyDuration(duration)}.`);
 	}
 
 }
