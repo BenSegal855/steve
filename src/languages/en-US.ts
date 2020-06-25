@@ -118,8 +118,9 @@ export default class extends Language {
 			],
 			COMMAND_INVITE_DESCRIPTION: 'Displays the invite link of the bot, to invite it to your guild.',
 			COMMAND_INFO: [
-				'Steve is a bot built on top of the Klasa framework and the Discord.js library.',
-				'He was custom-coded and is actively maintained by Jonathan#0412 and BoedJ#5476.',
+				'Stove is a bot based on Steve. Steve is built on top of the Klasa framework and the Discord.js library.',
+				'Steve was custom-coded and is actively maintained by Jonathan#0412 and BoedJ#5476.',
+				'Stove works just like Steve only a bit off.',
 				'',
 				'Some features of Steve include:',
 				'• ↩️  Self-assignable roles',
@@ -128,9 +129,11 @@ export default class extends Language {
 				'• ⏰  Reminders in case — OH MY GOD IT\'S BURNING',
 				'• 🔥  And many more! (`s;help` for the full list)',
 				'',
+				'Stove does all of these things too, but worse. Much worse.',
 				'Let us know if you have any issues! We try to fix bugs as soon as possible and are still adding new features when relevant/we have time.',
 				'',
-				'If you\'re interested in how Steve works, you can check his code out at <https://github.com/tuataria/steve>.'
+				'If you\'re interested in how Steve works, you can check his code out at <https://github.com/tuataria/steve>',
+				'and Stoves source code can be found at <https://github.com/BenSegal855/steve/tree/Stove>.'
 			],
 			COMMAND_INFO_DESCRIPTION: 'Provides some information about this bot.',
 			COMMAND_HELP_DESCRIPTION: 'Display help for a command.',

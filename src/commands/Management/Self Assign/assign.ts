@@ -49,25 +49,7 @@ export default class extends SteveCommand {
 	}
 
 	public async assign(msg: KlasaMessage, assignableRoles: Role[]): Promise<Message> {
-		const removedRoles: string[] = [];
-		const addedRoles: string[] = [];
-
-		for (const assignableRole of assignableRoles) {
-			const removing = msg.member.roles.cache.has(assignableRole.id);
-
-			if (removing) {
-				await msg.member.roles.remove(assignableRole);
-				removedRoles.push(assignableRole.name);
-			} else {
-				await msg.member.roles.add(assignableRole);
-				addedRoles.push(assignableRole.name);
-			}
-		}
-
-		const removedRolesString = removedRoles.length > 0 ? `${Emojis.Minus} Removed role(s): \`${removedRoles.join(', ')}\`.` : null;
-		const addedRolesString = addedRoles.length > 0 ? `${Emojis.Plus} Added role(s): \`${addedRoles.join(', ')}\`.` : null;
-
-		return msg.channel.send(`${removedRoles.length ? removedRolesString : ''}\n${addedRoles.length ? addedRolesString : ''}`);
+		return msg.channel.send("I am Stove, I don't really want to help you get roles.");
 	}
 
 }
