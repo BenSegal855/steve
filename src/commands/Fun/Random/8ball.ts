@@ -19,7 +19,7 @@ export default class extends SteveCommand {
 	}
 
 	public async run(msg: KlasaMessage): Promise<Message> {
-		return msg.channel.send(MAGIC8BALL_RESPONSES[Math.floor(Math.random() * MAGIC8BALL_RESPONSES.length)]);
+		return msg.channel.send("Ask again later");
 	}
 
 }

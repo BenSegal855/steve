@@ -15,7 +15,7 @@ export const LAVALINK_PORT = 8080;
 export const LAVALINK_HOST = '';
 export const LAVALINK_PASSWORD = '';
 
-export const NAME = 'Steve';
+export const NAME = 'Stove';
 
 export const TUATARIA = true;
 
@@ -47,10 +47,6 @@ export const CLIENT_OPTIONS: KlasaClientOptions = {
 	},
 	readyMessage: client => `Logged in and ready to serve ${client.guilds.cache.size} guilds as ${client.user.tag}.`
 };
-
-export const MAGIC8BALL_RESPONSES = [
-
-];
 
 export const DOCS = {
 
