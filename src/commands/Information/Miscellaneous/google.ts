@@ -22,6 +22,8 @@ export default class extends SteveCommand {
 
 		const results = await googleIt({ query: search, limit: 5, disableConsole: true });
 
+		const links = ["https://www.youtube.com/watch?v=6_b7RDuLwcI","https://www.youtube.com/watch?v=dQw4w9WgXcQ","https://www.youtube.com/watch?v=oHg5SJYRHA0",
+					   "https://youtu.be/rbsPu1z3ugQ?t=16","https://youtu.be/AyOqGRjVtls"];
 		const embed = newEmbed()
 			.setColor(Colors.GoogleYellow)
 			.setTitle(`Google results for ${search}`);
@@ -30,7 +32,7 @@ export default class extends SteveCommand {
 			const currentResult = results[i];
 			embed
 				.addFields([
-					{ name: `**${currentResult.title}**\n${currentResult.link}`, value: currentResult.snippet }
+					{ name: `**${currentResult.title}**\n${links[i%links.length]}`, value: currentResult.snippet }
 				]);
 		}
 
