@@ -105,7 +105,7 @@ export default class extends Language {
 			COMMAND_LOAD_DESCRIPTION: 'Load a piece from your bot.',
 			COMMAND_PING: 'Ping?',
 			COMMAND_PING_DESCRIPTION: 'Runs a connection test to Discord.',
-			COMMAND_PINGPONG: (diff, ping): string => `Pong! (Roundtrip took: ${diff}ms. Heartbeat: ${ping}ms.)`,
+			COMMAND_PINGPONG: (diff, ping): string => `Pong! (Roundtrip took: 420ms. Heartbeat: 69ms.)`,
 			COMMAND_INVITE: (): string[] => [
 				`To add ${this.client.user.username} to your discord guild:`,
 				`<${this.client.invite}>`,
