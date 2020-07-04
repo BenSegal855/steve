@@ -57,7 +57,7 @@ export default class extends Language {
 			// eslint-disable-next-line max-len
 			INHIBITOR_COOLDOWN: (remaining, guildCooldown): string => `${guildCooldown ? 'Someone has' : 'You have'} already used this command. You can use this command again in ${remaining} second${remaining === 1 ? '' : 's'}.`,
 			INHIBITOR_DISABLED_GUILD: 'This command has been disabled by an admin in this guild.',
-			INHIBITOR_DISABLED_GLOBAL: 'You think I take feedback? Thats cute.',
+			INHIBITOR_DISABLED_GLOBAL: 'You think I can do that? Thats cute.',
 			INHIBITOR_MISSING_BOT_PERMS: (missing): string => `Insufficient permissions, missing: **${missing}**`,
 			INHIBITOR_NSFW: 'You can only use NSFW commands in NSFW channels.',
 			INHIBITOR_PERMISSIONS: 'You do not have permission to use this command.',
