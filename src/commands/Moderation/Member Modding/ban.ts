@@ -16,7 +16,7 @@ export default class extends ModerationCommand {
 	}
 
 	public async handle(msg: KlasaMessage, target: GuildMember, reason: string): Promise<string> {
-		await msg.guild.moderation.ban(target, reason || '');
+		//await msg.guild.moderation.ban(target, reason || '');
 		return 'unban';
 	}
 

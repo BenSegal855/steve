@@ -15,7 +15,7 @@ export default class extends ModerationCommand {
 	}
 
 	public async handle(msg: KlasaMessage, target: GuildMember, reason: string): Promise<string> {
-		await msg.guild.moderation.kick(target, reason || '');
+		//await msg.guild.moderation.kick(target, reason || '');
 		return '';
 	}
 
